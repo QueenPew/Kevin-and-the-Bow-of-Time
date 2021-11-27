@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Personnages/personnage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objets/plateforme.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objets/crate.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="crate" parent="." instance=ExtResource( 3 )]
+position = Vector2( 422, 195 )
+
+[node name="Camera2D" type="Camera2D" parent="crate"]
+current = true
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 124 )
+
+[node name="plateforme" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2497, 230 )
+scale = Vector2( 25, 4 )
+
+[node name="plateforme2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6303, -1622 )
+scale = Vector2( 1, 100 )

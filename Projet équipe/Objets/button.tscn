@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://art/bouton bois.png" type="Texture" id=1]
+[ext_resource path="res://scripts/objects/button.gd" type="Script" id=2]
+[ext_resource path="res://scripts/pixelate.tres" type="Material" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 34.1483, 15.6147 )
+
+[node name="button" type="Area2D"]
+collision_layer = 32
+collision_mask = 6
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 46.75, 21.57 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="bouton bois" type="Sprite" parent="CollisionShape2D"]
+material = ExtResource( 3 )
+position = Vector2( 3, -34 )
+scale = Vector2( 2.475, 2.4914 )
+texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_button_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_button_body_exited"]
+[connection signal="button_depressed" from="." to="." method="_on_button_button_depressed"]

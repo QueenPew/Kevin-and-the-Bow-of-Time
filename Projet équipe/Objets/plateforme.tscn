@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="plateforme" type="StaticBody2D" groups=[
+"immovableObject",
+]]
+collision_mask = 14
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 350.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 176, 10 )
+polygon = PoolVector2Array( -176, -10, 174, -10, 174, 10, -176, 10 )

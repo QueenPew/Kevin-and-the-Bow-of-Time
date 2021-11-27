@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/objects/normal_arrow.gd" type="Script" id=1]
+[ext_resource path="res://art/normal_arrow.png" type="Texture" id=2]
+[ext_resource path="res://scripts/pixelate.tres" type="Material" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.8053, 2.43967 )
+
+[node name="normal_arrow" type="KinematicBody2D" groups=[
+"projectiles",
+]]
+material = ExtResource( 3 )
+collision_layer = 2147483656
+collision_mask = 53
+script = ExtResource( 1 )
+
+[node name="normal_arrow_sprite" type="Sprite" parent="."]
+position = Vector2( 0.496059, -0.198425 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+offset = Vector2( -23.0831, -8.39313 )
+
+[node name="despawnTimer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.16567, -0.382526 )
+shape = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="."]
+
+[connection signal="timeout" from="despawnTimer" to="." method="_on_despawnTimer_timeout"]

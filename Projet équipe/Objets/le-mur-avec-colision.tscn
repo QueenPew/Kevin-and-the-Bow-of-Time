@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://art/mur.png" type="Texture" id=1]
+
+[node name="staticbody2D" type="StaticBody2D"]
+position = Vector2( 0.0417023, -0.0311737 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -22.75, -62.1016 )
+scale = Vector2( 0.295635, 0.295635 )
+polygon = PoolVector2Array( 76.9515, 210.031, 327.114, 209.948, 326.996, 459.917, 76.9779, 460.022 )
+
+[node name="mur" type="Sprite" parent="."]
+position = Vector2( 36.9561, 37.1368 )
+scale = Vector2( 0.0368632, 0.0368632 )
+texture = ExtResource( 1 )

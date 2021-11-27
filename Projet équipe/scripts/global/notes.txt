@@ -1,0 +1,8 @@
+Pour flèches:
+Utiliser fonction pour que le plus longtemps la flèche est chargée, le plus elle va vite
+
+Pour time_stop_bubble:
+
+Quand la bulle arrête, les objets qui ont été ralenti regagnent leur momentum qu'ils avaient
+(Il faut probablement utiliser des variables et genre faire un signal à tout les objets qui passent qu'ils sont dedans.)
+

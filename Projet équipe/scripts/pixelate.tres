@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float size_x = 10.0; // blocks by x direction
+uniform float size_y = 0.0; // blocks by y direction
+
+void fragment() {
+    COLOR = texture(TEXTURE, vec2(floor(UV.x * size_x) / (size_x - 1.0), floor(UV.y * size_y) / (size_y - 1.0)));
+}
+"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/size_x = 1000.0
+shader_param/size_y = 1000.0

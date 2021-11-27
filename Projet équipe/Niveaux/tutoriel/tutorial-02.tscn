@@ -1,0 +1,248 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Objets/le-mur-avec-colision.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Personnages/personnage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objets/crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objets/porte.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objets/button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/objects/porte.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "porte"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionPolygon2D:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 730, 332 ), Vector2( 730, 301 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 349 )
+
+[node name="crate" parent="." instance=ExtResource( 3 )]
+position = Vector2( 257, 349 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 391 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1, 391 )
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 75, 391 )
+
+[node name="KinematicBody2D4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138, 391 )
+
+[node name="KinematicBody2D6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138, 391 )
+
+[node name="KinematicBody2D5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 182, 391 )
+
+[node name="KinematicBody2D7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 220, 391 )
+
+[node name="KinematicBody2D8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 220, 391 )
+
+[node name="KinematicBody2D9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 291, 391 )
+
+[node name="KinematicBody2D10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 347, 391 )
+
+[node name="KinematicBody2D37" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 391 )
+
+[node name="KinematicBody2D38" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 391 )
+
+[node name="KinematicBody2D39" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 391 )
+
+[node name="KinematicBody2D40" parent="." instance=ExtResource( 1 )]
+position = Vector2( 575, 391 )
+
+[node name="KinematicBody2D41" parent="." instance=ExtResource( 1 )]
+position = Vector2( 626, 391 )
+
+[node name="KinematicBody2D42" parent="." instance=ExtResource( 1 )]
+position = Vector2( 677, 391 )
+
+[node name="KinematicBody2D43" parent="." instance=ExtResource( 1 )]
+position = Vector2( 730, 391 )
+
+[node name="KinematicBody2D44" parent="." instance=ExtResource( 1 )]
+position = Vector2( 783, 391 )
+
+[node name="KinematicBody2D45" parent="." instance=ExtResource( 1 )]
+position = Vector2( 832, 391 )
+
+[node name="KinematicBody2D46" parent="." instance=ExtResource( 1 )]
+position = Vector2( 880, 391 )
+
+[node name="KinematicBody2D11" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 320 )
+
+[node name="KinematicBody2D12" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 261 )
+
+[node name="KinematicBody2D13" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 206 )
+
+[node name="KinematicBody2D14" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 206 )
+
+[node name="KinematicBody2D15" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 175 )
+
+[node name="KinematicBody2D16" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 140 )
+
+[node name="KinematicBody2D17" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 101 )
+
+[node name="KinematicBody2D18" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 53 )
+
+[node name="KinematicBody2D19" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, 0 )
+
+[node name="KinematicBody2D20" parent="." instance=ExtResource( 1 )]
+position = Vector2( -52, -51 )
+
+[node name="KinematicBody2D21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 10, -51 )
+
+[node name="KinematicBody2D22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 54, -51 )
+
+[node name="KinematicBody2D23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 107, -51 )
+
+[node name="KinematicBody2D24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 165, -51 )
+
+[node name="KinematicBody2D25" parent="." instance=ExtResource( 1 )]
+position = Vector2( 225, -51 )
+
+[node name="KinematicBody2D26" parent="." instance=ExtResource( 1 )]
+position = Vector2( 250, -51 )
+
+[node name="KinematicBody2D27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 292, -51 )
+
+[node name="KinematicBody2D28" parent="." instance=ExtResource( 1 )]
+position = Vector2( 332, -51 )
+
+[node name="KinematicBody2D29" parent="." instance=ExtResource( 1 )]
+position = Vector2( 377, -51 )
+
+[node name="KinematicBody2D30" parent="." instance=ExtResource( 1 )]
+position = Vector2( 418, -51 )
+
+[node name="KinematicBody2D31" parent="." instance=ExtResource( 1 )]
+position = Vector2( 459, -51 )
+
+[node name="KinematicBody2D32" parent="." instance=ExtResource( 1 )]
+position = Vector2( 527, -51 )
+
+[node name="KinematicBody2D33" parent="." instance=ExtResource( 1 )]
+position = Vector2( 596, -51 )
+
+[node name="KinematicBody2D34" parent="." instance=ExtResource( 1 )]
+position = Vector2( 654, -51 )
+
+[node name="KinematicBody2D35" parent="." instance=ExtResource( 1 )]
+position = Vector2( 705, -51 )
+
+[node name="KinematicBody2D36" parent="." instance=ExtResource( 1 )]
+position = Vector2( 767, -51 )
+
+[node name="button" parent="." instance=ExtResource( 5 )]
+position = Vector2( 626, 175 )
+collision_mask = 4
+
+[node name="porte2" type="StaticBody2D" parent="."]
+position = Vector2( 730, 301 )
+collision_mask = 15
+script = ExtResource( 6 )
+buttonAConnecter = "button"
+
+[node name="ColorRect" type="ColorRect" parent="porte2"]
+margin_top = -22.2
+margin_right = 40.0
+margin_bottom = 108.8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="porte2"]
+position = Vector2( 0, -22.2 )
+polygon = PoolVector2Array( 0, 0, 40, 0, 40, 131, 0, 131 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="porte2"]
+anims/porte = SubResource( 1 )
+
+[node name="porte" parent="." instance=ExtResource( 4 )]
+position = Vector2( 576, 321 )
+buttonAConnecter = "button"
+
+[editable path="porte"]

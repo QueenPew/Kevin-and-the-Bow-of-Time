@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/levels/scene_test.gd" type="Script" id=1]
+[ext_resource path="res://Objets/plateforme.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objets/crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Personnages/personnage.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objets/levelChanger.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objets/porte.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objets/button.tscn" type="PackedScene" id=7]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[node name="scene_test" type="Node2D" groups=[
+"level",
+]]
+script = ExtResource( 1 )
+
+[node name="levelChanger" parent="." instance=ExtResource( 5 )]
+position = Vector2( 932, 186 )
+next_scene_path = "res://scenes_niveau/test/mock-scene-changer.tscn"
+
+[node name="plateforme2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 49, -41 )
+rotation = -4.46638e-06
+
+[node name="plateforme7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5, 352 )
+rotation = -4.46638e-06
+
+[node name="plateforme8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, -41 )
+rotation = -4.46638e-06
+
+[node name="plateforme9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 750, -41 )
+rotation = -4.46638e-06
+
+[node name="plateforme3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 345.64, 352.007 )
+rotation = -4.46638e-06
+
+[node name="plateforme6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 345.64, 352.007 )
+rotation = -4.46638e-06
+
+[node name="plateforme5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 696, 352 )
+rotation = -4.46638e-06
+
+[node name="plateforme4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -39, 22 )
+scale = Vector2( 0.25, 20 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 529, 237 )
+scale = Vector2( 0.25, 20 )
+current = true
+
+[node name="crate" parent="." groups=[
+"crates",
+] instance=ExtResource( 3 )]
+position = Vector2( 385.869, 290.89 )
+rotation = -4.46638e-06
+physics_material_override = SubResource( 1 )
+
+[node name="personnage" parent="." instance=ExtResource( 4 )]
+position = Vector2( 167, 203 )
+
+[node name="plateforme11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1002, -195 )
+scale = Vector2( 0.25, 20 )
+
+[node name="porte" parent="." instance=ExtResource( 6 )]
+position = Vector2( 961, 223 )
+buttonAConnecter = "button"
+
+[node name="button" parent="." instance=ExtResource( 7 )]
+position = Vector2( 369, 66 )
+
+[node name="CollisionShape2D" parent="button" index="1"]
+one_way_collision = false
+[connection signal="tree_entered" from="." to="." method="_on_scene_test_tree_entered"]
+
+[editable path="porte"]
+
+[editable path="button"]
